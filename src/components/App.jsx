@@ -1,10 +1,9 @@
 import React from 'react';
+import StaticPage from './static/StaticPage'
 
 function App() {
   return (
-    <div>
-      <h1>Working</h1>
-    </div>
+    <StaticPage/>
   );
 }
 

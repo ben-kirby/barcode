@@ -1,7 +1,7 @@
 {
-  "name": "newproject",
+  "name": "Barcode",
   "version": "1.0.0",
-  "description": "new Propject",
+  "description": "Barcode Scanner App",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,12 +10,13 @@
     "lint": "eslint src/** src/**/**; exit 0",
     "lint-fix": "eslint src/** src/**/** --fix; exit 0"
   },
-  "author": "",
+  "author": "Ben Kirby",
   "license": "ISC",
   "dependencies": {
     "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-webcam": "^1.1.0",
     "styled-jsx": "^3.2.1",
     "uuid": "^3.2.1"
   },

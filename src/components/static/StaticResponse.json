@@ -1,0 +1,122 @@
+{
+  "response_code": 0,
+  "results": [{
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who was the Prime Minister of the United Kingdom for most of World War II?",
+      "correct_answer": "Winston Churchill",
+      "incorrect_answers": [
+        "Neville Chamberlain",
+        "Harold Macmillan",
+        "Edward Heath"
+      ]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is &quot;dabbing&quot;?",
+      "correct_answer": "A dance",
+      "incorrect_answers": [
+        "A medical procedure",
+        "A sport",
+        "A language"
+      ]
+    },
+    {
+      "category": "History",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "The United States Department of Homeland Security was formed in response to the September 11th attacks.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the Italian word for &quot;tomato&quot;?",
+      "correct_answer": "Pomodoro",
+      "incorrect_answers": [
+        "Aglio",
+        "Cipolla",
+        "Peperoncino"
+      ]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which company has exclusive rights to air episodes of the &quot;The Grand Tour&quot;?",
+      "correct_answer": "Amazon",
+      "incorrect_answers": [
+        "Netflix",
+        "BBC",
+        "CCTV"
+      ]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the oldest US state?",
+      "correct_answer": "Delaware",
+      "incorrect_answers": [
+        "Rhode Island",
+        "Maine",
+        "Virginia"
+      ]
+    },
+    {
+      "category": "Animals",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which class of animals are newts members of?",
+      "correct_answer": "Amphibian",
+      "incorrect_answers": [
+        "Fish",
+        "Reptiles",
+        "Mammals"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "In &quot;The Binding of Isaac&quot;, which item instantly kills Mom and Mom&#039;s Heart?",
+      "correct_answer": "The Bible",
+      "incorrect_answers": [
+        "The Halo",
+        "Brimstone",
+        "Book of Shadows"
+      ]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In &quot;The Simpsons&quot;, what is the real name of &quot;Comic Book Guy&quot;?",
+      "correct_answer": "Jeff Albertson",
+      "incorrect_answers": [
+        "Comic Book Guy",
+        "Edward Stone",
+        "Jack Richardson"
+      ]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which band recorded the album &quot;Parallel Lines&quot;?",
+      "correct_answer": "Blondie",
+      "incorrect_answers": [
+        "Paramore",
+        "Coldplay",
+        "The Police"
+      ]
+    }
+  ]
+}
