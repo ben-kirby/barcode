@@ -8,13 +8,17 @@ const videoConstraints = {
   facingMode: 'user',
 }
 
-handleCaptureClick(){
 
-}
 
 class WebcamDisplay extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
+    this.handleScreenCapture = this.handleScreenCapture.bind(this)
+  }
+
+  handleScreenCapture(props){
+    let _photo = null;
+    console.log('hello');
     
   }
 
@@ -29,7 +33,7 @@ class WebcamDisplay extends React.Component {
 
         <ReusableButton
           title='capture'
-          action
+          onClick={this.handleScreenCapture}
         />
       </div>
     );
