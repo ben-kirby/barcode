@@ -1,5 +1,6 @@
 import React from 'react'
 import Webcam from 'react-webcam'
+import ReusableButton from '../reusable/ReusableButton'
 
 const videoConstraints = {
   width: 1280,
@@ -7,14 +8,32 @@ const videoConstraints = {
   facingMode: 'user',
 }
 
-function WebcamDisplay(){
-  return(
-    <Webcam
-      audio={false}
-      height={500}
-      width={500}
-      videoConstraints={videoConstraints} /> 
-  )
+handleCaptureClick(){
+
+}
+
+class WebcamDisplay extends React.Component {
+  constructor(props){
+    super(props)
+    
+  }
+
+  render(){
+    return (
+      <div>
+        <Webcam
+          audio={false}
+          height={500}
+          width={500}
+          videoConstraints={videoConstraints} />
+
+        <ReusableButton
+          title='capture'
+          action
+        />
+      </div>
+    );
+  }
 }
 
 export default WebcamDisplay

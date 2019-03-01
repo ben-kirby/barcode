@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
+import { createStore } from 'redux';
+import ticketListReducer from './reducers/ticket-list-reducer';
 
 const render = (Component) => {
   ReactDOM.render(
