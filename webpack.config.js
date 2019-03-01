@@ -33,19 +33,6 @@ module.exports = {
 
   module: {
     rules: [{
-        test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          'file-loader',
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-            },
-          },
-        ],
-      },
-      {
         test: /\.jsx?$/,
         enforce: "pre",
         loader: "eslint-loader",
@@ -67,12 +54,24 @@ module.exports = {
             "react",
           ],
           plugins: [
-            "react-hot-loader/babel"
+            "react-hot-loader/babel",
+            "styled-jsx/babel"
           ]
         }
+      },
+      {
+        test: /\.(png|gif|jp(e*)g|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 8000,
+            name: 'images/[hash]-[name].[ext]'
+          }
+        }
       }
-    ],
+    ]
   },
+
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
