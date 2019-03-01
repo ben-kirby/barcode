@@ -1,5 +1,4 @@
 import React from 'react'
-import Camera from './camera'
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +8,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Camera />
+        <h1>Hello</h1>
       </div>
     )
   }
