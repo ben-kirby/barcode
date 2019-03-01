@@ -16,6 +16,8 @@ This single page web app makes use of a computers webcam to decode barcodes to g
 
 ### Component Tree
 
+<img src="./src/assets/Component.png" width="100%"/>
+
 ## Features
 
 ## Known Issues
