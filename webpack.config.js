@@ -42,6 +42,7 @@ module.exports = {
           configFile: "./.eslintrc.json"
         }
       },
+
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -59,6 +60,7 @@ module.exports = {
           ]
         }
       },
+
       {
         test: /\.(png|gif|jp(e*)g|svg)$/,
         use: {
@@ -71,7 +73,6 @@ module.exports = {
       }
     ]
   },
-
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
