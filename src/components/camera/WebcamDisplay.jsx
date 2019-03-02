@@ -45,6 +45,7 @@ class WebcamDisplay extends React.Component {
           title='Capture'
           onClick={this.handleCapture}
         />
+        <img src={this.state.imageData} />
       </div>
     );
   }
