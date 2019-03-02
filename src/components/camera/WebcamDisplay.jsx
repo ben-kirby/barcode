@@ -1,6 +1,7 @@
-import React from 'react'
-import Webcam from 'react-webcam'
-import ReusableButton from '../reusable/ReusableButton'
+import React from 'react';
+import Webcam from 'react-webcam';
+import ReusableButton from '../reusable/ReusableButton';
+import Quagga from 'quagga';
 
 
 class WebcamDisplay extends React.Component {
@@ -8,10 +9,12 @@ class WebcamDisplay extends React.Component {
     super(props);
     this.state = {
       imageData: null,
+      barcodePresent: false,
     };
     
     this.handleCapture = this.handleCapture.bind(this);
     this.setRef = this.setRef.bind(this);
+    this.decodeBarcode = this.decodeBarcode.bind(this);
   }
   
   setRef(webcam) {
@@ -21,8 +24,9 @@ class WebcamDisplay extends React.Component {
   handleCapture() {
     let imageSrc = this.webcam.getScreenshot();
     this.setState({imageData: imageSrc});
-    console.log(this.state.imageData);
-    
+  }
+
+  decodeBarcode(){
     
   }
   
@@ -31,7 +35,12 @@ class WebcamDisplay extends React.Component {
       width: 1280,
       height: 720,
       facingMode: 'user',
+    };
+
+    if (this.state.imageData != null) {
+      this.decodeBarcode();
     }
+
     return (
       <div>
         <Webcam
