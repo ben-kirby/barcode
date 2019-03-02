@@ -2,38 +2,48 @@ import React from 'react'
 import Webcam from 'react-webcam'
 import ReusableButton from '../reusable/ReusableButton'
 
-const videoConstraints = {
-  width: 1280,
-  height: 720,
-  facingMode: 'user',
-}
-
-
 
 class WebcamDisplay extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.handleScreenCapture = this.handleScreenCapture.bind(this)
+    this.state = {
+      imageData: null,
+    };
+    
+    this.handleCapture = this.handleCapture.bind(this);
+    this.setRef = this.setRef.bind(this);
   }
-
-  handleScreenCapture(props){
-    let _photo = null;
-    console.log('hello');
+  
+  setRef(webcam) {
+    this.webcam = webcam;
+  }
+  
+  handleCapture() {
+    let imageSrc = this.webcam.getScreenshot();
+    this.setState({imageData: imageSrc});
+    console.log(this.state.imageData);
+    
     
   }
-
-  render(){
+  
+  render() {
+    const videoConstraints = {
+      width: 1280,
+      height: 720,
+      facingMode: 'user',
+    }
     return (
       <div>
         <Webcam
           audio={false}
           height={500}
           width={500}
+          ref={this.setRef}
           videoConstraints={videoConstraints} />
 
         <ReusableButton
-          title='capture'
-          onClick={this.handleScreenCapture}
+          title='Capture'
+          onClick={this.handleCapture}
         />
       </div>
     );
