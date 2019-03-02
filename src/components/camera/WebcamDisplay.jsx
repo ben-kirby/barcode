@@ -2,6 +2,7 @@ import React from 'react';
 import Webcam from 'react-webcam';
 import ReusableButton from '../reusable/ReusableButton';
 import Quagga from 'quagga';
+import barcodeImage from '../../assets/CapturedImage.jpg';
 
 
 class WebcamDisplay extends React.Component {
@@ -27,8 +28,25 @@ class WebcamDisplay extends React.Component {
   }
 
   decodeBarcode(){
+    console.log(this.state.imageData);
     
+    Quagga.decodeSingle({
+      decoder: {
+        readers: ['upc_reader', 'upc_e_reader'] 
+      },
+      locate: true, 
+      src: barcodeImage
+    }, function (result) {
+
+      if (result.codeResult) {
+        console.log("result", result.codeResult.code);
+      } else {
+        console.log("not detected");
+      }
+    });
   }
+
+  
   
   render() {
     const videoConstraints = {
@@ -38,7 +56,7 @@ class WebcamDisplay extends React.Component {
     };
 
     if (this.state.imageData != null) {
-      this.decodeBarcode();
+      this.decodeBarcode(this.state.imageData);
     }
 
     return (
@@ -47,6 +65,7 @@ class WebcamDisplay extends React.Component {
           audio={false}
           height={500}
           width={500}
+          screenshotFormat={'image/jpeg'}
           ref={this.setRef}
           videoConstraints={videoConstraints} />
 
@@ -54,7 +73,6 @@ class WebcamDisplay extends React.Component {
           title='Capture'
           onClick={this.handleCapture}
         />
-        <img src={this.state.imageData} />
       </div>
     );
   }
