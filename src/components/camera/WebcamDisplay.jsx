@@ -2,7 +2,7 @@ import React from 'react';
 import Webcam from 'react-webcam';
 import ReusableButton from '../reusable/ReusableButton';
 import Quagga from 'quagga';
-import capturedImage from '../../assets/CapturedImage.jpg'
+import capturedImage from '../../assets/png_test.png'
 
 class WebcamDisplay extends React.Component {
   constructor(props) {
@@ -13,7 +13,6 @@ class WebcamDisplay extends React.Component {
 
     this.handleCapture = this.handleCapture.bind(this);
     this.setRef = this.setRef.bind(this);
-    this.convertToBlob = this.convertToBlob.bind(this);
     this.decodeImage = this.decodeImage.bind(this);
   }
 
@@ -28,7 +27,7 @@ class WebcamDisplay extends React.Component {
 
     Quagga.decodeSingle({
       decoder: {
-        readers: ["code_128_reader"] 
+        readers: ["upc_reader", "upc_e_reader", "code_128_reader"] 
       },
       locate: true, 
       src: capturedImage
@@ -36,7 +35,7 @@ class WebcamDisplay extends React.Component {
       console.log(result);
       
       if (result.codeResult) {
-        console.log("result");
+        console.log("result", result.codeResult.code);
       } else {
         console.log("not detected");
       }
@@ -60,7 +59,7 @@ class WebcamDisplay extends React.Component {
           audio={false}
           height={500}
           width={500}
-          screenshotFormat={'image/jpeg'}
+          screenshotFormat={'image/png'}
           ref={this.setRef}
           videoConstraints={videoConstraints} />
 
