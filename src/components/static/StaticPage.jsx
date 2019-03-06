@@ -1,7 +1,4 @@
 import React from 'react';
-import capturedimage from '../../assets/CapturedImage.jpg'
-import UPC from './UPC'
-import StaticResponse from './StaticResponse.json'
 import WebcamDisplay from '../camera/WebcamDisplay'
 
 function StaticPage(){

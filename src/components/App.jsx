@@ -1,9 +1,9 @@
 import React from 'react';
-import StaticPage from './static/StaticPage';
+import WebcamDisplay from './camera/WebcamDisplay';
 
 function App() {
   return (
-    <StaticPage/>
+    <WebcamDisplay />
   );
 }
 

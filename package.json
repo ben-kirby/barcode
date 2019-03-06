@@ -13,6 +13,7 @@
   "author": "Ben Kirby",
   "license": "ISC",
   "dependencies": {
+    "b64-to-blob": "^1.2.19",
     "moment": "^2.18.1",
     "quagga": "^0.12.1",
     "react": "^15.5.4",
